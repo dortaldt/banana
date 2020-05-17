@@ -251,4 +251,9 @@ input[type='checkbox']:checked {
         padding: 0;
         margin-bottom: 24px;
     }
+
+    .step {
+        margin-right: 0;
+        margin-left: 0;
+    }
   }
