@@ -137,14 +137,14 @@ var app = new Vue({
     toggleDone: function(index){
       var status = this.ingridients[index].done
       this.ingridients[index].done = !status
-      ga('send', 'done')
+      gtag('send', 'done')
     },
     toggleStep: function(index) {
       for(step in this.steps){
         this.steps[step].active = false
       }
       this.steps[index].active = true
-      ga('send', 'click step')
+      gtag('send', 'click step')
     },
     copyUrl: function() {
       var dummy = document.createElement('input'),
@@ -155,12 +155,12 @@ var app = new Vue({
       document.execCommand('copy');
       alert("Link copied!");
       document.body.removeChild(dummy);
-      ga('send', 'share')
+      gtag('send', 'share')
     },
 
     likeToggle: function() {
       this.isLiked = !this.isLiked
-      ga('send', 'like')
+      gtag('send', 'like')
     }
   }
 })
