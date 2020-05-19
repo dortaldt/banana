@@ -193,7 +193,7 @@ input[type='checkbox']:checked {
 
 .step {
     background-color: #FFF1A8;
-    margin: 48px 16px;
+    margin: 24px 16px;
     padding: 16px;
     border-radius: 8px;
     box-shadow: none;
@@ -209,7 +209,7 @@ input[type='checkbox']:checked {
     height: 24px;
     text-align: center;
     line-height: 24px;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
 
 .step-name {
