@@ -197,7 +197,6 @@ var app = new Vue({
     toggleDone: function(index){
       var status = this.ingredients[index].done
       this.ingredients[index].done = !status
-      gtag('send', 'done')
     },
     toggleStep: function(index) {
       for(step in this.steps){
