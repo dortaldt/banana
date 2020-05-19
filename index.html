@@ -73,12 +73,12 @@
                 </div>
            </section>
            <section id="ingridient">
-                <a id='ingridients' ref='ingridients'></a>
+                <a id='ingredients' ref='ingredients'></a>
                 <div class="divider">
                 </div>
-                <h2>Ingridients</h2>
+                <h2>Ingredients</h2>
                 <table>
-                    <tr v-for="(ing, index) in ingridients" :class="{done : ing.done}">
+                    <tr v-for="(ing, index) in ingredients" :class="{done : ing.done}">
                         <td><input type="checkbox" @click='toggleDone(index)'></td>
                         <td>{{ing.name}}</td>
                         <td>{{ing.quant}}</td>

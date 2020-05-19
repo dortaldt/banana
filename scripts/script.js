@@ -17,10 +17,10 @@ var app = new Vue({
       isLiked: false,
       app_name: 'Recipe',
       recipe_name: 'Banana Bread',
-      navbar_items: [{'name':'overview', 'active': false}, {'name':'ingridients', 'active': false}, {'name':'steps', 'active': false}],
+      navbar_items: [{'name':'overview', 'active': false}, {'name':'ingredients', 'active': false}, {'name':'steps', 'active': false}],
       rating_items: [{'name':'Taste', 'rating': 4.6, 'votes': 129}, {'name':'Ease', 'rating': 4.9, 'votes': 85}],
       main_img: "url(https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_1460,h_1825/k%2Farchive%2F027ca667115cd10e50a49074535c2a699d68083c)",
-      ingridients: [
+      ingredients: [
         {
           'name':'unsalted butter',
           'quant': 8,
@@ -195,8 +195,8 @@ var app = new Vue({
     },
 
     toggleDone: function(index){
-      var status = this.ingridients[index].done
-      this.ingridients[index].done = !status
+      var status = this.ingredients[index].done
+      this.ingredients[index].done = !status
       gtag('send', 'done')
     },
     toggleStep: function(index) {
