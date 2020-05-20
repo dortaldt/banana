@@ -92,8 +92,10 @@
                 <h2>Steps</h2>
                 <div class="steps-cont">
                     <div v-for='(item,index) in steps' :class='{step: true, activestep: item.active}' @click='toggleStep(index)'>
-                        <div class="step-number">{{index + 1}}</div>
-                        <div class="step-name">{{item.name}}</div>
+                        <div>
+                            <div class="step-number">{{index + 1}}</div>
+                            <div class="step-name">{{item.name}}</div>
+                        </div>
                         <div class="step-ing">{{item.ing}}</div>
                         <div class="step-cont">{{item.content}}</div>
                     </div>

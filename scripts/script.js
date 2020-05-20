@@ -109,7 +109,7 @@ var app = new Vue({
       },
       {
         'name': 'Mix the “drys”',
-        'ing': '2 cups all-purpose flour - 1 teaspoon baking soda - 1/4 teaspoon salt',
+        'ing': '2 cups all-purpose flour · 1 teaspoon baking soda · 1/4 teaspoon salt',
         'content': 'Now take all the dry ingredients — flour, baking soda, and salt, and mix them in a medium bowl.',
         'active': false
       },
@@ -121,7 +121,7 @@ var app = new Vue({
       },
       {
         'name': 'Add the “wets”',
-        'ing': '2 large eggs - 1 teaspoon vanilla extract - 8 tablespoons unsalted butter - 1/4 cup milk',
+        'ing': '2 large eggs · 1 teaspoon vanilla extract · 8 tablespoons unsalted butter · 1/4 cup milk',
         'content': 'Add the wet ingredients— eggs, milk, melted butter, vanilla extract, and sugar (yeh, it’s not wet, but now it will) to the meshed bananas pulp and mix it until it becomes a unified batter.',
         'active': false
       },

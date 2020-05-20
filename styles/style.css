@@ -215,10 +215,12 @@ input[type='checkbox']:checked {
 .step-name {
     font-size: 24px;
     font-weight: 700;
+    /* margin-left: 8px; */
 }
 
 .step-ing {
     font-weight: 100;
+    margin-top: 4px;
 }
 
 .step-cont {
@@ -276,5 +278,9 @@ footer {
     .step {
         margin-right: 0;
         margin-left: 0;
+    }
+
+    .rating {
+        overflow: hidden;
     }
   }
