@@ -194,7 +194,7 @@ input[type='checkbox']:checked {
 .step {
     background-color: #FFF1A8;
     margin: 24px 16px;
-    padding: 16px;
+    padding: 24px;
     border-radius: 8px;
     box-shadow: none;
     transition: background-color 0.1s, box-shadow 0.1s;
@@ -238,6 +238,27 @@ input[type='checkbox']:checked {
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
+
+footer {
+    width: 100%;
+    display: flex;
+    background-color: white;
+    /* margin: auto; */
+}
+
+.footer-cont {
+    margin: 16px auto;
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.credit {
+    margin: auto 24px;
+    margin-right: 0px;
+    font-weight: 100;
+}
 
 @media only screen and (min-width: 600px) {
     table {
