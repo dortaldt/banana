@@ -197,14 +197,17 @@ var app = new Vue({
     toggleDone: function(index){
       var status = this.ingredients[index].done
       this.ingredients[index].done = !status
+      sendEvent('step done ' + index)
     },
+
     toggleStep: function(index) {
       for(step in this.steps){
         this.steps[step].active = false
       }
       this.steps[index].active = true
-      gtag('send', 'click step')
+      sendEvent('Step selected')
     },
+    
     copyUrl: function() {
       var dummy = document.createElement('input'),
       text = window.location.href;
@@ -214,13 +217,18 @@ var app = new Vue({
       document.execCommand('copy');
       alert("Link copied!");
       document.body.removeChild(dummy);
-      gtag('share')
+      sendEvent('Click share')
     },
 
     likeToggle: function() {
       this.isLiked = !this.isLiked
-      gtag('send', 'like')
+      sendEvent('Click like')
     }
   }
 })
+
+function sendEvent(name){
+  gtag('event', name, {'method': 'Google'});
+  console.log('GA fire ' + name)
+}
 
