@@ -13,6 +13,7 @@ var app = new Vue({
     el: '#app',
     data: {
       active: false,
+      ingredients: [],
       isSticky: false,
       isLiked: false,
       app_name: 'Recipe',
@@ -20,74 +21,74 @@ var app = new Vue({
       navbar_items: [{'name':'overview', 'active': false}, {'name':'ingredients', 'active': false}, {'name':'steps', 'active': false}],
       rating_items: [{'name':'Taste', 'rating': 4.6, 'votes': 129}, {'name':'Ease', 'rating': 4.9, 'votes': 85}],
       main_img: "url(https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_1460,h_1825/k%2Farchive%2F027ca667115cd10e50a49074535c2a699d68083c)",
-      ingredients: [
-        {
-          'name':'unsalted butter',
-          'quant': 8,
-          'scale': 'tablespoon',
-          'done': false
-        },
-        {
-          'name':'eggs',
-          'quant': 2,
-          'scale': 'large',
-          'done': false
-        },
-        {
-          'name':'milk',
-          'quant': 1/4,
-          'scale': 'cup',
-          'done': false
-        },
-        {
-          'name':'bananas (very ripe)',
-          'quant': 3,
-          'scale': 'medium',
-          'done': false
-        },
-        {
-          'name':'cooking spray',
-          'quant': 1,
-          'scale': '',
-          'done': false
-        },
-        {
-          'name':'granulated sugar',
-          'quant': 1,
-          'scale': 'cup',
-          'done': false
-        },
-        {
-          'name':'vanilla extract',
-          'quant': 1,
-          'scale': 'teaspoon',
-          'done': false
-        },
-        {
-          'name':'all-purpose flour',
-          'quant': 2,
-          'scale': 'cup',
-          'done': false
-        },
-        {
-          'name':'baking soda',
-          'quant': 1,
-          'scale': 'teaspoon',
-          'done': false
-        },
-        {
-          'name':'salt',
-          'quant': 1/4,
-          'scale': 'teaspoon',
-          'done': false
-        },
-        {
-          'name':'chopped nuts or chocolate chips (optional)',
-          'quant': 1/2,
-          'scale': 'cup',
-          'done': false
-        }
-      ],
+      // ingredients: [
+      //   {
+      //     'name':'unsalted butter',
+      //     'quant': 8,
+      //     'scale': 'tablespoon',
+      //     'done': false
+      //   },
+      //   {
+      //     'name':'eggs',
+      //     'quant': 2,
+      //     'scale': 'large',
+      //     'done': false
+      //   },
+      //   {
+      //     'name':'milk',
+      //     'quant': 1/4,
+      //     'scale': 'cup',
+      //     'done': false
+      //   },
+      //   {
+      //     'name':'bananas (very ripe)',
+      //     'quant': 3,
+      //     'scale': 'medium',
+      //     'done': false
+      //   },
+      //   {
+      //     'name':'cooking spray',
+      //     'quant': 1,
+      //     'scale': '',
+      //     'done': false
+      //   },
+      //   {
+      //     'name':'granulated sugar',
+      //     'quant': 1,
+      //     'scale': 'cup',
+      //     'done': false
+      //   },
+      //   {
+      //     'name':'vanilla extract',
+      //     'quant': 1,
+      //     'scale': 'teaspoon',
+      //     'done': false
+      //   },
+      //   {
+      //     'name':'all-purpose flour',
+      //     'quant': 2,
+      //     'scale': 'cup',
+      //     'done': false
+      //   },
+      //   {
+      //     'name':'baking soda',
+      //     'quant': 1,
+      //     'scale': 'teaspoon',
+      //     'done': false
+      //   },
+      //   {
+      //     'name':'salt',
+      //     'quant': 1/4,
+      //     'scale': 'teaspoon',
+      //     'done': false
+      //   },
+      //   {
+      //     'name':'chopped nuts or chocolate chips (optional)',
+      //     'quant': 1/2,
+      //     'scale': 'cup',
+      //     'done': false
+      //   }
+      // ],
     steps:[
       {
         'name': 'Preheat the oven',
@@ -157,6 +158,12 @@ var app = new Vue({
       }
     ]
   },
+  mounted() {
+      this.ingredients = window.ingrs
+      for(ing in this.ingredients){
+        this.ingredients[ing].quant = 1;
+      }
+  },
   methods: {
     handleScroll: function (evt, el) {
       if (window.scrollY > 80) {
@@ -197,7 +204,7 @@ var app = new Vue({
     toggleDone: function(index){
       var status = this.ingredients[index].done
       this.ingredients[index].done = !status
-      sendEvent('step done ' + index)
+      sendEvent('ing checked ' + index)
     },
 
     toggleStep: function(index) {
@@ -205,7 +212,7 @@ var app = new Vue({
         this.steps[step].active = false
       }
       this.steps[index].active = true
-      sendEvent('Step selected')
+      sendEvent('Step selected ' + index)
     },
     
     copyUrl: function() {
@@ -223,7 +230,7 @@ var app = new Vue({
     likeToggle: function() {
       this.isLiked = !this.isLiked
       sendEvent('Click like')
-    }
+    },
   }
 })
 

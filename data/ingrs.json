@@ -1,0 +1,31 @@
+ingrs = [
+    {
+        "id" : 0,
+        "name":"unsalted butter",
+        "sizes": {
+            "cup": 1,
+            "tablespoon": 8,
+            "teaspoon": 16,
+            "grams": 130
+        }
+    },
+    {
+        "id": 1,
+        "name":"egg",
+        "sizes": {
+            "cup": 1,
+            "tablespoon": 8,
+            "teaspoon": 16,
+            "grams": 130
+        }
+    },
+    {
+        "id": 2,
+        "name":"milk",
+        "sizes": {
+            "cup": 1,
+            "ml" : 200,
+            "grams" : 200
+        }
+    }
+]
