@@ -7,7 +7,8 @@ ingrs = [
             "tablespoon": 8,
             "grams": 227
         },
-        "selectedSize": "grams"
+        "selectedSize": "grams",
+        "done": false
     },
     {
         "id": 1,
@@ -19,7 +20,8 @@ ingrs = [
             "teaspoon": 16,
             "grams": 130
         },
-        "selectedSize": "egg"
+        "selectedSize": "egg",
+        "done": false
     },
     {
         "id": 2,
@@ -29,7 +31,8 @@ ingrs = [
             "ml" : 200,
             "grams" : 200
         },
-        "selectedSize": "ml"
+        "selectedSize": "ml",
+        "done": false
     },
     {
         "id": 3,
@@ -39,6 +42,7 @@ ingrs = [
             "ml" : 200,
             "grams" : 200
         },
-        "selectedSize": "grams"
+        "selectedSize": "grams",
+        "done": false
     }
 ]
