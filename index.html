@@ -81,7 +81,7 @@
                         <td><input type="checkbox" @click='toggleDone(index)'></td>
                         <td>{{ing.name}}</td>
                         <td>{{ing.quant}}</td>
-                        <td>{{ing.sizes['grams']}}</td>
+                        <td @click='switchSize(ing)'>{{ing.selectedSize}}</td>
                     </tr>
                 </table>
            </section>
@@ -115,6 +115,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="data/ingrs.json"></script>
+<script src="data/recipe.json"></script>
 <script src="scripts/script.js"></script>
 </html>
  

@@ -5,27 +5,40 @@ ingrs = [
         "sizes": {
             "cup": 1,
             "tablespoon": 8,
-            "teaspoon": 16,
-            "grams": 130
-        }
+            "grams": 227
+        },
+        "selectedSize": "grams"
     },
     {
         "id": 1,
         "name":"egg",
         "sizes": {
-            "cup": 1,
+            "cup": 12,
+            "egg": 1,
             "tablespoon": 8,
             "teaspoon": 16,
             "grams": 130
-        }
+        },
+        "selectedSize": "egg"
     },
     {
         "id": 2,
         "name":"milk",
         "sizes": {
-            "cup": 1,
+            "cup": 5,
             "ml" : 200,
             "grams" : 200
-        }
+        },
+        "selectedSize": "ml"
+    },
+    {
+        "id": 3,
+        "name":"suger",
+        "sizes": {
+            "cup": 10,
+            "ml" : 200,
+            "grams" : 200
+        },
+        "selectedSize": "grams"
     }
 ]
