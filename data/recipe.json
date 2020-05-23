@@ -2,9 +2,16 @@ recipe = {
     "id": 0,
     "name" : "Banana Bread",
     "ingredients" : [
-        { "id" : 0, "quant" : 10 },
-        { "id" : 1, "quant" : 3 },
-        { "id" : 3, "quant" : 2 }
+        { "id" : 0, "quant" : 225 },
+        { "id" : 1, "quant" : 2 },
+        { "id" : 2, "quant" : 0.25 },
+        { "id" : 3, "quant" : 1 },
+        { "id" : 4, "quant" : 1 },
+        { "id" : 5, "quant" : 3 },
+        { "id" : 6, "quant" : 2 },
+        { "id" : 7, "quant" : 1 },
+        { "id" : 8, "quant" : 0.25 },
+        { "id" : 9, "quant" : 0.5 }
     ],
     "steps": [
         {

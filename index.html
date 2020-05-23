@@ -81,7 +81,9 @@
                         <td><input type="checkbox" @click='toggleDone(index)'></td>
                         <td>{{ing.name}}</td>
                         <td>{{ing.quant}}</td>
-                        <td @click='switchSize(ing)'>{{ing.selectedSize}}</td>
+                        <td>
+                            <button @click='switchSize(ing)'>{{ing.selectedSize}}</button>
+                        </td>
                     </tr>
                 </table>
            </section>

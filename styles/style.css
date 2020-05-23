@@ -20,8 +20,28 @@ table {
 tr td:first-child{
     padding-left: 16px;
 }
+
 tr td:last-child {
     padding-right: 16px;
+    width: 102px;
+    display: flex;
+    margin: auto;
+    /* font-size: 16px; */
+    /* cursor: pointer; */
+    /* border: 1px solid; */
+    /* margin-right: 16px; */
+}
+
+tr td:last-child button {
+    /* padding: 12px 16px; */
+    /* min-width: 93px; */
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    margin-left: 4px;
+    color: #0874fe;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 tr td::first-letter {
@@ -175,6 +195,7 @@ input[type='checkbox'] {
     height: 16px;
     border: 1px solid #0071ff;
     border-radius: 24px;
+    cursor: pointer;
     /* background: none; */
 }
 
@@ -189,8 +210,9 @@ input[type='checkbox']:checked {
 
 .done {
     text-decoration: line-through;
-    color: #868686;
+    color: #868686 !important;
 }
+
 
 .step {
     background-color: #FFF1A8;

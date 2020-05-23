@@ -5,7 +5,7 @@ ingrs = [
         "sizes": {
             "cup": 1,
             "tablespoon": 8,
-            "grams": 227
+            "grams": 225
         },
         "selectedSize": "grams",
         "done": false
@@ -14,11 +14,8 @@ ingrs = [
         "id": 1,
         "name":"egg",
         "sizes": {
-            "cup": 12,
             "egg": 1,
-            "tablespoon": 8,
-            "teaspoon": 16,
-            "grams": 130
+            "grams": 50
         },
         "selectedSize": "egg",
         "done": false
@@ -27,22 +24,84 @@ ingrs = [
         "id": 2,
         "name":"milk",
         "sizes": {
-            "cup": 5,
-            "ml" : 200,
-            "grams" : 200
+            "cup": 1,
+            "ml" : 235,
+            "grams" : 245
         },
-        "selectedSize": "ml",
+        "selectedSize": "cup",
         "done": false
     },
     {
         "id": 3,
         "name":"suger",
         "sizes": {
-            "cup": 10,
-            "ml" : 200,
+            "cup": 1,
+            "tablespoon" : 16,
             "grams" : 200
         },
-        "selectedSize": "grams",
+        "selectedSize": "cup",
+        "done": false
+    },
+    {
+        "id": 4,
+        "name":"vanilla extract",
+        "sizes": {
+            "tablespoon" : 1/3,
+            "teaspoon" : 1,
+            "grams" : 13
+        },
+        "selectedSize": "teaspoon",
+        "done": false
+    },
+    {
+        "id": 5,
+        "name":"bananas",
+        "sizes": {
+            "unit": 1,
+            "grams" : 118
+        },
+        "selectedSize": "unit",
+        "done": false
+    },
+    {
+        "id": 6,
+        "name":"all-purpose flour",
+        "sizes": {
+            "cup": 1,
+            "tablespoon" : 8,
+            "grams" : 125
+        },
+        "selectedSize": "cup",
+        "done": false
+    },
+    {
+        "id": 7,
+        "name":"baking soda",
+        "sizes": {
+            "teaspoon": 1,
+            "grams": 5
+        },
+        "selectedSize": "teaspoon",
+        "done": false
+    },
+    {
+        "id": 8,
+        "name":"salt",
+        "sizes": {
+            "teaspoon": 1,
+            "gram": 5
+        },
+        "selectedSize": "teaspoon",
+        "done": false
+    },
+    {
+        "id": 9,
+        "name":"chopped nuts",
+        "sizes": {
+            "cup": 1,
+            "grams": 125
+        },
+        "selectedSize": "cup",
         "done": false
     }
 ]
