@@ -145,6 +145,8 @@ var app = new Vue({
       selectedIng.selectedSize = newSize
       console.log(selectedIng.quant*ratio)
       selectedIng.quant = round(selectedIng.quant*ratio,2)
+
+      sendEvent('Click switch size '+ ing.name)
       
     }
   }
