@@ -4,8 +4,8 @@ ingrs = [
         "name":"unsalted butter",
         "sizes": {
             "cup": 1,
-            "tablespoon": 8,
-            "grams": 225
+            "tablespoon": 16,
+            "grams": 220
         },
         "selectedSize": "grams",
         "done": false
@@ -14,10 +14,10 @@ ingrs = [
         "id": 1,
         "name":"egg",
         "sizes": {
-            "egg": 1,
+            "unit": 1,
             "grams": 50
         },
-        "selectedSize": "egg",
+        "selectedSize": "unit",
         "done": false
     },
     {
@@ -25,8 +25,8 @@ ingrs = [
         "name":"milk",
         "sizes": {
             "cup": 1,
-            "ml" : 235,
-            "grams" : 245
+            "ml" : 240,
+            "grams" : 240
         },
         "selectedSize": "cup",
         "done": false

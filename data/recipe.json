@@ -2,7 +2,7 @@ recipe = {
     "id": 0,
     "name" : "Banana Bread",
     "ingredients" : [
-        { "id" : 0, "quant" : 225 },
+        { "id" : 0, "quant" : 110 },
         { "id" : 1, "quant" : 2 },
         { "id" : 2, "quant" : 0.25 },
         { "id" : 3, "quant" : 1 },

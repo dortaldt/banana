@@ -32,6 +32,10 @@ tr td:last-child {
     /* margin-right: 16px; */
 }
 
+.quant-col {
+    text-align: right;
+}
+
 tr td:last-child button {
     /* padding: 12px 16px; */
     /* min-width: 93px; */
@@ -42,6 +46,10 @@ tr td:last-child button {
     color: #0874fe;
     font-size: 16px;
     cursor: pointer;
+}
+
+.done > td:last-child button {
+    color: #868686;
 }
 
 tr td::first-letter {
@@ -209,10 +217,10 @@ input[type='checkbox']:checked {
 }
 
 .done {
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
     color: #868686 !important;
+    font-weight: 100;
 }
-
 
 .step {
     background-color: #FFF1A8;
