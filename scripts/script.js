@@ -13,150 +13,38 @@ var app = new Vue({
     el: '#app',
     data: {
       active: false,
+      ingredients: [],
+      steps: [],
       isSticky: false,
       isLiked: false,
       app_name: 'Recipe',
-      recipe_name: 'Banana Bread',
+      recipe_name: window.recipe.name,
       navbar_items: [{'name':'overview', 'active': false}, {'name':'ingredients', 'active': false}, {'name':'steps', 'active': false}],
       rating_items: [{'name':'Taste', 'rating': 4.6, 'votes': 129}, {'name':'Ease', 'rating': 4.9, 'votes': 85}],
-      main_img: "url(https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_1460,h_1825/k%2Farchive%2F027ca667115cd10e50a49074535c2a699d68083c)",
-      ingredients: [
-        {
-          'name':'unsalted butter',
-          'quant': 8,
-          'scale': 'tablespoon',
-          'done': false
-        },
-        {
-          'name':'eggs',
-          'quant': 2,
-          'scale': 'large',
-          'done': false
-        },
-        {
-          'name':'milk',
-          'quant': 1/4,
-          'scale': 'cup',
-          'done': false
-        },
-        {
-          'name':'bananas (very ripe)',
-          'quant': 3,
-          'scale': 'medium',
-          'done': false
-        },
-        {
-          'name':'cooking spray',
-          'quant': 1,
-          'scale': '',
-          'done': false
-        },
-        {
-          'name':'granulated sugar',
-          'quant': 1,
-          'scale': 'cup',
-          'done': false
-        },
-        {
-          'name':'vanilla extract',
-          'quant': 1,
-          'scale': 'teaspoon',
-          'done': false
-        },
-        {
-          'name':'all-purpose flour',
-          'quant': 2,
-          'scale': 'cup',
-          'done': false
-        },
-        {
-          'name':'baking soda',
-          'quant': 1,
-          'scale': 'teaspoon',
-          'done': false
-        },
-        {
-          'name':'salt',
-          'quant': 1/4,
-          'scale': 'teaspoon',
-          'done': false
-        },
-        {
-          'name':'chopped nuts or chocolate chips (optional)',
-          'quant': 1/2,
-          'scale': 'cup',
-          'done': false
-        }
-      ],
-    steps:[
-      {
-        'name': 'Preheat the oven',
-        'ing': '',
-        'content': 'Let’s start with preheating the oven to 350°F(175°C)',
-        'active': true
-      },
-      {
-        'name': 'Prepare the pan',
-        'ing': '8x5-inch (255x130cm) loaf pan',
-        'content': 'Line an 8x5-inch (255x130cm) loaf pan with parchment paper, letting the excess hang over the long sides to form a sling',
-        'active': false
-      },
-      {
-        'name': 'Melt the butter',
-        'ing': '8 tablespoons unsalted butter',
-        'content': 'In a microwave, or over a low heat stove, melt the butter so it becomes liquid',
-        'active': false
-      },
-      {
-        'name': 'Mix the “drys”',
-        'ing': '2 cups all-purpose flour · 1 teaspoon baking soda · 1/4 teaspoon salt',
-        'content': 'Now take all the dry ingredients — flour, baking soda, and salt, and mix them in a medium bowl.',
-        'active': false
-      },
-      {
-        'name': 'Mash in the bananas',
-        'ing': '3 bananas (very ripe)',
-        'content': 'In a large bowl, using a fork or handheld masher, mash the bananas until they turn into a uniform pulp.',
-        'active': false
-      },
-      {
-        'name': 'Add the “wets”',
-        'ing': '2 large eggs · 1 teaspoon vanilla extract · 8 tablespoons unsalted butter · 1/4 cup milk',
-        'content': 'Add the wet ingredients— eggs, milk, melted butter, vanilla extract, and sugar (yeh, it’s not wet, but now it will) to the meshed bananas pulp and mix it until it becomes a unified batter.',
-        'active': false
-      },
-      {
-        'name': 'Add the “drys”',
-        'ing': '',
-        'content': 'Slowly, while stirring the batter, add the pre-mixed “drys” into the pulp.',
-        'active': false
-      },
-      {
-        'name': 'Pure the batter into the pan',
-        'ing': '',
-        'content': 'Almost there! Now pure the batter into the pan.',
-        'active': false
-      },
-      {
-        'name': 'Bake for 50 mins',
-        'ing': '',
-        'content': 'Depends on your oven, it should take 45-50 mins for the bread to be ready. ',
-        'active': false
-      },
-      {
-        'name': 'Cool',
-        'ing': '',
-        'content': 'Let the bread cool for 10 mins inside the pan, and then 10 mins outside of the pan',
-        'active': false
-      },
-      {
-        'name': 'Enjoy',
-        'ing': '',
-        'content': 'Enjoy your fresh home-made banana bread!',
-        'active': false
-      }
-    ]
+      main_img: "url(https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_1460,h_1825/k%2Farchive%2F027ca667115cd10e50a49074535c2a699d68083c)"
   },
+  mounted() {
+
+    // Importing the needed ingredients and quantites
+    var allIngrs = window.ingrs
+    var recipe = window.recipe
+    var recipeIngrs = recipe.ingredients
+
+    for(ing in allIngrs) {
+      var selectedIngr = allIngrs.find(element => element.id == recipeIngrs[ing].id)
+      if(selectedIngr !== undefined){
+        console.log(selectedIngr.name + ' : ' + recipeIngrs[ing].quant)
+        selectedIngr.quant = recipeIngrs[ing].quant
+        this.ingredients.push(selectedIngr)
+      }
+    }
+  
+    // Importing the needed steps
+    for(step in window.recipe.steps) {
+      this.steps.push(window.recipe.steps[step])
+    }
+  },
+
   methods: {
     handleScroll: function (evt, el) {
       if (window.scrollY > 80) {
@@ -197,7 +85,7 @@ var app = new Vue({
     toggleDone: function(index){
       var status = this.ingredients[index].done
       this.ingredients[index].done = !status
-      sendEvent('step done ' + index)
+      sendEvent('ing checked ' + index)
     },
 
     toggleStep: function(index) {
@@ -205,7 +93,7 @@ var app = new Vue({
         this.steps[step].active = false
       }
       this.steps[index].active = true
-      sendEvent('Step selected')
+      sendEvent('Step selected ' + index)
     },
     
     copyUrl: function() {
@@ -223,12 +111,48 @@ var app = new Vue({
     likeToggle: function() {
       this.isLiked = !this.isLiked
       sendEvent('Click like')
+    },
+
+    switchSize: function(ing) {
+      var currentSize =  ing.selectedSize
+      var sizes = []
+      var getSizes = function () {
+        for(size in ing.sizes){
+          sizes.push(size)
+        }
+      }
+
+      getSizes();
+
+      var currentIndex = sizes.indexOf(currentSize)
+      var newSize = ''
+      if(currentIndex < (sizes.length - 1)) {
+        newSize = sizes[++currentIndex]
+      } else {
+        newSize = sizes[0]
+      }
+
+      var ratio = (ing.sizes[newSize]/ing.sizes[currentSize])
+
+      // Rounding the new quantity
+      function round(value, precision) {
+          var multiplier = Math.pow(10, precision || 0);
+          return Math.round(value * multiplier) / multiplier;
+      }
+      
+      //Changing the quantity and size for the ingredient 
+      var selectedIng = this.ingredients.find(element => element.id == ing.id)
+      selectedIng.selectedSize = newSize
+      console.log(selectedIng.quant*ratio)
+      selectedIng.quant = round(selectedIng.quant*ratio,2)
+
+      sendEvent('Click switch size '+ ing.name)
+      
     }
   }
 })
 
 function sendEvent(name){
   gtag('event', name, {'method': 'Google'});
-  console.log('GA fire ' + name)
 }
 

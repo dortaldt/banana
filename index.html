@@ -3,7 +3,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons&?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,300&display=swap&?family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Best Banana Bread</title>
+    <title>THE Banana Bread</title>
     <meta name="description" content="World's best banana bread recipe, and it's simple!">
     <meta property="og:title" content="The only banana bread recipe you need">
     <meta property="og:description" content="World's best banana bread recipe, and it's simple!">
@@ -80,8 +80,10 @@
                     <tr v-for="(ing, index) in ingredients" :class="{done : ing.done}">
                         <td><input type="checkbox" @click='toggleDone(index)'></td>
                         <td>{{ing.name}}</td>
-                        <td>{{ing.quant}}</td>
-                        <td>{{ing.scale}}</td>
+                        <td class="quant-col">{{ing.quant}}</td>
+                        <td>
+                            <button @click='switchSize(ing)'>{{ing.selectedSize}}</button>
+                        </td>
                     </tr>
                 </table>
            </section>
@@ -114,6 +116,8 @@
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="data/ingrs.json"></script>
+<script src="data/recipe.json"></script>
 <script src="scripts/script.js"></script>
 </html>
  

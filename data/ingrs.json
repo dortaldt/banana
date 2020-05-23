@@ -1,0 +1,107 @@
+ingrs = [
+    {
+        "id" : 0,
+        "name":"unsalted butter",
+        "sizes": {
+            "cup": 1,
+            "tablespoon": 16,
+            "grams": 220
+        },
+        "selectedSize": "grams",
+        "done": false
+    },
+    {
+        "id": 1,
+        "name":"egg",
+        "sizes": {
+            "unit": 1,
+            "grams": 50
+        },
+        "selectedSize": "unit",
+        "done": false
+    },
+    {
+        "id": 2,
+        "name":"milk",
+        "sizes": {
+            "cup": 1,
+            "ml" : 240,
+            "grams" : 240
+        },
+        "selectedSize": "cup",
+        "done": false
+    },
+    {
+        "id": 3,
+        "name":"suger",
+        "sizes": {
+            "cup": 1,
+            "tablespoon" : 16,
+            "grams" : 200
+        },
+        "selectedSize": "cup",
+        "done": false
+    },
+    {
+        "id": 4,
+        "name":"vanilla extract",
+        "sizes": {
+            "tablespoon" : 1/3,
+            "teaspoon" : 1,
+            "grams" : 13
+        },
+        "selectedSize": "teaspoon",
+        "done": false
+    },
+    {
+        "id": 5,
+        "name":"bananas",
+        "sizes": {
+            "unit": 1,
+            "grams" : 118
+        },
+        "selectedSize": "unit",
+        "done": false
+    },
+    {
+        "id": 6,
+        "name":"all-purpose flour",
+        "sizes": {
+            "cup": 1,
+            "tablespoon" : 8,
+            "grams" : 125
+        },
+        "selectedSize": "cup",
+        "done": false
+    },
+    {
+        "id": 7,
+        "name":"baking soda",
+        "sizes": {
+            "teaspoon": 1,
+            "grams": 5
+        },
+        "selectedSize": "teaspoon",
+        "done": false
+    },
+    {
+        "id": 8,
+        "name":"salt",
+        "sizes": {
+            "teaspoon": 1,
+            "gram": 5
+        },
+        "selectedSize": "teaspoon",
+        "done": false
+    },
+    {
+        "id": 9,
+        "name":"chopped nuts",
+        "sizes": {
+            "cup": 1,
+            "grams": 125
+        },
+        "selectedSize": "cup",
+        "done": false
+    }
+]
