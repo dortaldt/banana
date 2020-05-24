@@ -50,6 +50,7 @@ tr td:last-child button {
 
 .done > td:last-child button {
     color: #868686;
+    font-weight: 300;
 }
 
 tr td::first-letter {
@@ -199,16 +200,29 @@ input[type='checkbox'] {
     -webkit-appearance:none;
     -moz-appearance:none;
     appearance:none;
-    width: 16px;
-    height: 16px;
-    border: 1px solid #0071ff;
-    border-radius: 24px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #0071ff;
+    border-radius: 4px;
     cursor: pointer;
+    /* content: '✔'; */
     /* background: none; */
 }
 
 input[type='checkbox']:checked {
-    background-color: #0071ff;
+    background-color: #949494;
+    border-color: #949494;
+}
+
+input[type='checkbox']:checked:after {
+    color: white;
+    font-size: 16px;
+    position: relative;
+    left: 2px;
+    top: 2px;
+    font-weight: 700;
+    font-family: "Material Icons";
+    content: "checked";
 }
 
 .divider {
