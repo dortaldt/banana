@@ -100,7 +100,7 @@ var app = new Vue({
       var dummy = document.createElement('input'),
       text = window.location.href;
       document.body.appendChild(dummy);
-      dummy.value = text;
+      dummy.value = text + '?share=app';
       dummy.select();
       document.execCommand('copy');
       alert("Link copied!");

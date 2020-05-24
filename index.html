@@ -49,7 +49,7 @@
                 <div class="overview-header">
                     <h2>{{recipe_name}}</h2>
                     <div class="social-buttons">
-                        <button @click='copyUrl()'><span class="material-icons">reply</span><label>Share</label></button>
+                        <button @click='copyUrl()'><span class="material-icons share-icon">reply</span><label>Share</label></button>
                         <button><span :class="{'material-icons':true, liked:isLiked}" @click='likeToggle()'>thumb_up</span><label>Rate</label></button>
                         <!-- <a href="whatsapp://send?text=Hello%20World!">Hello, world!</a> -->
                     </div>
