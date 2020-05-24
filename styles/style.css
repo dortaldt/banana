@@ -205,8 +205,7 @@ input[type='checkbox'] {
     border: 2px solid #0071ff;
     border-radius: 4px;
     cursor: pointer;
-    /* content: '✔'; */
-    /* background: none; */
+    outline: none;
 }
 
 input[type='checkbox']:checked {
@@ -220,7 +219,6 @@ input[type='checkbox']:checked:after {
     position: relative;
     left: 2px;
     top: 2px;
-    font-weight: 700;
     font-family: "Material Icons";
     content: "checked";
 }
@@ -231,7 +229,6 @@ input[type='checkbox']:checked:after {
 }
 
 .done {
-    /* text-decoration: line-through; */
     color: #868686 !important;
     font-weight: 100;
 }
