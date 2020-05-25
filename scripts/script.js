@@ -9,6 +9,11 @@ Vue.directive('scroll', {
   }
 })
 
+Vue.component('banner', {
+  props: ['content'],
+  template: '<div class="banner"><span class="banner-cont">{{content}}</span><span class="material-icons">close</span></div>'
+})
+
 var app = new Vue({
     el: '#app',
     data: {

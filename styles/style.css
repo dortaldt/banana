@@ -238,7 +238,7 @@ input[type='checkbox']:checked:after {
 .step {
     background-color: #FFF1A8;
     margin: 24px 16px;
-    padding: 24px;
+    padding: 16px;
     border-radius: 8px;
     box-shadow: none;
     transition: background-color 0.1s, box-shadow 0.1s;
@@ -314,6 +314,19 @@ footer {
     margin: auto 24px;
     margin-right: 0px;
     font-weight: 100;
+}
+
+.banner {
+    padding: 16px;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #f0ffde; */
+}
+
+.banner-cont {
+    margin: auto 0;
 }
 
 @media only screen and (min-width: 600px) {
