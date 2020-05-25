@@ -24,8 +24,8 @@ tr td:first-child{
 tr td:last-child {
     padding-right: 16px;
     width: 102px;
-    display: flex;
-    margin: auto;
+    /* display: flex; */
+    /* margin: auto; */
     /* font-size: 16px; */
     /* cursor: pointer; */
     /* border: 1px solid; */
@@ -37,13 +37,13 @@ tr td:last-child {
 }
 
 tr td:last-child button {
-    /* padding: 12px 16px; */
+    padding: 12px 16px;
     /* min-width: 93px; */
     background-color: transparent;
     border: none;
     border-radius: 8px;
     margin-left: 4px;
-    color: #0874fe;
+    color: #0071ff;
     font-size: 16px;
     cursor: pointer;
 }
@@ -72,6 +72,7 @@ td {
     display: flex;
     flex-direction: column;
     background-color: #F2C94C;
+    z-index: 99;
 }
 
 .overview-header {
@@ -190,6 +191,7 @@ li {
     top:0;
     width: 100%;
     box-shadow: 1px 3px 12px rgba(0,0,0,0.22);
+    z-index: 1;
 }
 
 .navbar-placer {

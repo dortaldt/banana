@@ -82,7 +82,9 @@
                         <td>{{ing.name}}</td>
                         <td class="quant-col">{{ing.quant}}</td>
                         <td>
-                            <button @click='switchSize(ing)'>{{ing.selectedSize}}</button>
+                            <button @click='switchSize(ing)'>
+                                <span>{{ing.selectedSize}}</span>
+                            </button>
                         </td>
                     </tr>
                 </table>
