@@ -351,6 +351,8 @@ footer {
 .banner-cont {
     margin: auto 0;
     line-height: 20px;
+    font-size: 14px;
+    font-weight: 100;
 }
 
 .close-ban {
