@@ -76,6 +76,7 @@
                 <div class="divider">
                 </div>
                 <h2>Ingredients</h2>
+                <banner content="Tip: you can change the item unit by clicking on the unit name ('grams')"></banner>
                 <table>
                     <tr v-for="(ing, index) in ingredients" :class="{done : ing.done}">
                         <td><input type="checkbox" @click='toggleDone(index)'></td>
@@ -94,7 +95,7 @@
                 <div class="divider">
                 </div>
                 <h2>Steps</h2>
-                <banner content="You can click and highlight steps for easy trackig of your progress"></banner>
+                <banner content="Tip: you can click and highlight steps for easy trackig of your progress"></banner>
                 <div class="steps-cont">
                     <div v-for='(item,index) in steps' :class='{step: true, activestep: item.active}' @click='toggleStep(index)'>
                         <div>
@@ -103,6 +104,7 @@
                         </div>
                         <div class="step-ing">{{item.ing}}</div>
                         <div class="step-cont">{{item.content}}</div>
+                        <!-- <banner content="It's smart to melt the butter in a microwave"></banner> -->
                     </div>
                 </div>
             </section>
