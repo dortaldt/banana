@@ -33,7 +33,7 @@ ingrs = [
     },
     {
         "id": 3,
-        "name":"suger",
+        "name":"sugar",
         "sizes": {
             "cup": 1,
             "tablespoon" : 16,
