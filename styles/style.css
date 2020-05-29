@@ -4,9 +4,19 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
+
+#app {
+    background-color: #f9f9f9;
+}
+
 h1 {
     font-family: 'Roboto Slab';
 }
+
+h2 {
+    font-weight: 300;
+}
+
 h1,h2 {
     margin-left: 16px
 }
@@ -19,6 +29,11 @@ table {
 
 tr td:first-child{
     padding-left: 16px;
+}
+
+tr td:nth-child(2) {
+    /* font-weight: 700; */
+    /* font-size: 18px; */
 }
 
 tr td:last-child {
@@ -43,9 +58,10 @@ tr td:last-child button {
     border: none;
     border-radius: 8px;
     margin-left: 4px;
-    color: #0071ff;
+    /* color: #0071ff; */
     font-size: 16px;
     cursor: pointer;
+    font-weight:;
 }
 
 .done > td:last-child button {
@@ -64,6 +80,7 @@ tr:nth-child(even) {
 td {
     padding: 16px 8px;
     border: none;
+    /* font-weight: 600; */
     /* max-width: 193px; */
     /* border: 2px solid; */
 }
@@ -121,6 +138,7 @@ td {
     border-radius: 8px;
     border-color: #cccccc;
     color: #4f4f4f;
+    background-color: white;
 }
 
 .rating-score {
@@ -226,7 +244,7 @@ input[type='checkbox']:checked:after {
 }
 
 .divider {
-    height: 54px;
+    height: 32px;
     width: 100%;
 }
 
@@ -238,7 +256,7 @@ input[type='checkbox']:checked:after {
 .step {
     background-color: #FFF1A8;
     margin: 24px 16px;
-    padding: 24px;
+    padding: 16px;
     border-radius: 8px;
     box-shadow: none;
     transition: background-color 0.1s, box-shadow 0.1s;
@@ -269,6 +287,7 @@ input[type='checkbox']:checked:after {
 
 .step-cont {
     margin-top: 16px;
+    max-width: 400px;
 }
 
 .activestep {
@@ -316,6 +335,33 @@ footer {
     font-weight: 100;
 }
 
+.banner {
+    /* background-color: green; */
+    /* margin: 16; */
+    padding: 16px;
+    border: 1px solid #d8d8d8;
+    border-radius: 0;
+    display: flex;
+    color: #636363;
+    justify-content: space-between;
+    background-color: white;
+    /* background-color: #f0ffde; */
+}
+
+.banner-cont {
+    margin: auto 0;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.close-ban {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #636363;
+}
+
 @media only screen and (min-width: 600px) {
     table {
         box-shadow: 1px 3px 12px rgba(0,0,0,0.22);
@@ -340,5 +386,10 @@ footer {
 
     .main-img {
         height: 556px;
+    }
+
+    .banner {
+        margin: 16px auto;
+        border-radius: 8px;
     }
   }

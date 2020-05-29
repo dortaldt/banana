@@ -9,6 +9,26 @@ Vue.directive('scroll', {
   }
 })
 
+Vue.component('banner', {
+  props: ['content'],
+  data: function(){
+    return {
+      isOn: true
+    }
+  },
+  methods: {
+    closeBanner: function(){
+      this.isOn = false
+    }
+  },
+  template: `<div class="banner" v-if="isOn">
+              <span class="banner-cont">{{content}}</span>
+              <button class="close-ban" @click="closeBanner()">
+                <span class="material-icons">close</span>
+              </button>
+            </div>`
+})
+
 var app = new Vue({
     el: '#app',
     data: {
