@@ -32,37 +32,45 @@ Vue.component('banner', {
 var app = new Vue({
     el: '#app',
     data: {
+      recipeId: 0,
       active: false,
       ingredients: [],
       steps: [],
       isSticky: false,
       isLiked: false,
-      app_name: 'Recipe',
-      recipe_name: window.recipe.name,
+      app_name: 'Recipes',
+      recipe_des: "",
+      recipe_name: "",
       navbar_items: [{'name':'overview', 'active': false}, {'name':'ingredients', 'active': false}, {'name':'steps', 'active': false}],
-      rating_items: [{'name':'Taste', 'rating': 4.6, 'votes': 129}, {'name':'Ease', 'rating': 4.9, 'votes': 85}],
-      main_img: "url(./images/main.jpg)"
+      rating_items: [],
+      main_img: ""
   },
   mounted() {
 
     // Importing the needed ingredients and quantites
     var allIngrs = window.ingrs
-    var recipe = window.recipe
+    var recipe = window.recipe[this.recipeId]
     var recipeIngrs = recipe.ingredients
 
     for(ing in allIngrs) {
       var selectedIngr = allIngrs.find(element => element.id == recipeIngrs[ing].id)
       if(selectedIngr !== undefined){
-        console.log(selectedIngr.name + ' : ' + recipeIngrs[ing].quant)
         selectedIngr.quant = recipeIngrs[ing].quant
         this.ingredients.push(selectedIngr)
       }
     }
   
     // Importing the needed steps
-    for(step in window.recipe.steps) {
-      this.steps.push(window.recipe.steps[step])
+    for(step in recipe.steps) {
+      this.steps.push(recipe.steps[step])
     }
+
+    // Importing the description, name and img
+    this.recipe_des = recipe.recipe_des
+    this.recipe_name = recipe.name 
+    this.rating_items = recipe.rating
+    this.main_img = recipe.main_img
+    
   },
 
   methods: {
@@ -90,7 +98,6 @@ var app = new Vue({
               this.navbar_items[item].active = true;
             }
           }
-          console.log(this.$refs[ref].id + ' is active')
         }
       }
     },
@@ -163,7 +170,6 @@ var app = new Vue({
       //Changing the quantity and size for the ingredient 
       var selectedIng = this.ingredients.find(element => element.id == ing.id)
       selectedIng.selectedSize = newSize
-      console.log(selectedIng.quant*ratio)
       selectedIng.quant = round(selectedIng.quant*ratio,2)
 
       sendEvent('Click switch size '+ ing.name)

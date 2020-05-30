@@ -54,17 +54,36 @@
                         <!-- <a href="whatsapp://send?text=Hello%20World!">Hello, world!</a> -->
                     </div>
                 </div>
-                <div class="rating">
-                    <div class="rating-item" v-for='item in rating_items'>
-                        <div class="rating-title">{{item.name}}</div>
-                        <div class="rating-score">
-                            <span>{{item.rating}}</span>
-                            <span class="material-icons md-18" >star</span>
-                            <span class="material-icons md-18">star</span>
-                            <span class="material-icons md-18">star</span>
-                            <span class="material-icons md-18">star</span>
-                            <span class="material-icons md-18">star_half</span>
-                            <span>({{item.votes}})</span>
+                <div class="overview-des">
+                    <p>{{recipe_des}}</p>
+                </div>
+                <div class="rating-wrap">
+                    <div class="rating">
+                        <div class="rating-item" v-for='item in rating_items'>
+                            <div class="rating-title">{{item.name}}</div>
+                            <div class="rating-score">
+                                <span>{{item.rating}}</span>
+                                <span class="material-icons md-18" v-if="item.rating > 1">star</span>
+                                <span class="material-icons md-18" v-else-if="item.rating > 0.5">star_half</span>
+                                <span class="material-icons md-18" v-else>star_border</span>
+
+                                <span class="material-icons md-18" v-if="item.rating > 2">star</span>
+                                <span class="material-icons md-18" v-else-if="item.rating > 1.5">star_half</span>
+                                <span class="material-icons md-18" v-else>star_border</span>
+
+                                <span class="material-icons md-18" v-if="item.rating > 3">star</span>
+                                <span class="material-icons md-18" v-else-if="item.rating > 2.5">star_half</span>
+                                <span class="material-icons md-18" v-else>star_border</span>
+
+                                <span class="material-icons md-18" v-if="item.rating > 4">star</span>
+                                <span class="material-icons md-18" v-else-if="item.rating > 3.5">star_half</span>
+                                <span class="material-icons md-18" v-else>star_border</span>
+
+                                <span class="material-icons md-18" v-if="item.rating == 5">star</span>
+                                <span class="material-icons md-18" v-else-if="item.rating > 4.5">star_half</span>
+                                <span class="material-icons md-18" v-else>star_border</span>
+                                <span>({{item.votes}})</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -104,7 +123,6 @@
                         </div>
                         <div class="step-ing">{{item.ing}}</div>
                         <div class="step-cont">{{item.content}}</div>
-                        <!-- <banner content="It's smart to melt the butter in a microwave"></banner> -->
                     </div>
                 </div>
             </section>
@@ -113,7 +131,7 @@
            <div class="footer-cont">
                 <div class="credit">The Banana Project 🍌</div>
                 <div class="social-buttons">
-                    <button @click='copyUrl()'><span class="material-icons">reply</span><label>Share</label></button>
+                    <button @click='copyUrl()'><span class="material-icons share-icon">reply</span><label>Share</label></button>
                     <button><span :class="{'material-icons':true, liked:isLiked}" @click='likeToggle()'>thumb_up</span><label>Rate</label></button>
                 </div>
            </div>
