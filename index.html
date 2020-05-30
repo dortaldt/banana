@@ -59,11 +59,25 @@
                         <div class="rating-title">{{item.name}}</div>
                         <div class="rating-score">
                             <span>{{item.rating}}</span>
-                            <span class="material-icons md-18" >star</span>
-                            <span class="material-icons md-18">star</span>
-                            <span class="material-icons md-18">star</span>
-                            <span class="material-icons md-18">star</span>
-                            <span class="material-icons md-18">star_half</span>
+                            <span class="material-icons md-18" v-if="item.rating > 1">star</span>
+                            <span class="material-icons md-18" v-else-if="item.rating > 0.5">star_half</span>
+                            <span class="material-icons md-18" v-else>star_border</span>
+
+                            <span class="material-icons md-18" v-if="item.rating > 2">star</span>
+                            <span class="material-icons md-18" v-else-if="item.rating > 1.5">star_half</span>
+                            <span class="material-icons md-18" v-else>star_border</span>
+
+                            <span class="material-icons md-18" v-if="item.rating > 3">star</span>
+                            <span class="material-icons md-18" v-else-if="item.rating > 2.5">star_half</span>
+                            <span class="material-icons md-18" v-else>star_border</span>
+
+                            <span class="material-icons md-18" v-if="item.rating > 4">star</span>
+                            <span class="material-icons md-18" v-else-if="item.rating > 3.5">star_half</span>
+                            <span class="material-icons md-18" v-else>star_border</span>
+
+                            <span class="material-icons md-18" v-if="item.rating == 5">star</span>
+                            <span class="material-icons md-18" v-else-if="item.rating > 4.5">star_half</span>
+                            <span class="material-icons md-18" v-else>star_border</span>
                             <span>({{item.votes}})</span>
                         </div>
                     </div>

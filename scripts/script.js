@@ -40,7 +40,7 @@ var app = new Vue({
       app_name: 'Recipe',
       recipe_name: window.recipe.name,
       navbar_items: [{'name':'overview', 'active': false}, {'name':'ingredients', 'active': false}, {'name':'steps', 'active': false}],
-      rating_items: [{'name':'Taste', 'rating': 4.6, 'votes': 129}, {'name':'Ease', 'rating': 4.9, 'votes': 85}],
+      rating_items: [{'name':'Taste', 'rating': 3.8, 'votes': 129}, {'name':'Ease', 'rating': 4.9, 'votes': 85}],
       main_img: "url(./images/main.jpg)"
   },
   mounted() {
