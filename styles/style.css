@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 #app {
@@ -17,8 +17,15 @@ h2 {
     font-weight: 300;
 }
 
+p {
+    font-weight: 300;
+    margin: 0;
+}
+
 h1,h2 {
-    margin-left: 16px
+    margin-left: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 table {
@@ -99,6 +106,10 @@ td {
     /* margin: 0 16px; */
 }
 
+.overview-des {
+    margin: 16px;
+}
+
 .main-content {
     margin: auto;
     max-width: 600px;
@@ -132,6 +143,11 @@ td {
     padding: 16px;
 }
 
+.rating-wrap {
+    position: relative;
+}
+
+
 .rating-item {
     margin-right: 24px;
     border: 1px solid;
@@ -145,6 +161,7 @@ td {
 .rating-score {
     display: flex;
     font-size: 12px;
+    margin-top: 4px;
 }
 
 .rating-score span {
@@ -215,7 +232,7 @@ li {
 }
 
 .navbar-placer {
-    height: 54px;
+    height: 57px;
 }
 
 input[type='checkbox'] {
@@ -379,15 +396,12 @@ footer {
     .rating {
         padding: 0;
         margin-bottom: 24px;
+        overflow: visible;
     }
 
     .step {
         margin-right: 0;
         margin-left: 0;
-    }
-
-    .rating {
-        overflow: hidden;
     }
 
     .main-img {
@@ -397,5 +411,13 @@ footer {
     .banner {
         margin: 16px auto;
         border-radius: 8px;
+    }
+
+    .overview-des {
+        font-weight: 100;
+        margin-top: 16px;
+        margin-left: 0;
+        margin-bottom: 16px;
+        max-width: 460px;
     }
   }
