@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons&?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -98,7 +98,10 @@
                 <banner content="Tip: you can change the item unit by clicking on the unit name ('grams')"></banner>
                 <table>
                     <tr v-for="(ing, index) in ingredients" :class="{done : ing.done}">
-                        <td><input type="checkbox" @click='toggleDone(index)'></td>
+                        <td>
+                            <input type="checkbox" :id="index" @click='toggleDone(index)'>
+                            <label :for="index" hidden>{{ing.name}}</label>
+                        </td> 
                         <td>{{ing.name}}</td>
                         <td class="quant-col">{{ing.quant}}</td>
                         <td>
