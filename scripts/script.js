@@ -94,7 +94,7 @@ var app = new Vue({
 
           for (var item in this.navbar_items) {
             this.navbar_items[item].active = false;
-            if(this.navbar_items[item].name == this.$refs[ref].id){
+            if((this.navbar_items[item].name + '-link') == this.$refs[ref].id){
               this.navbar_items[item].active = true;
             }
           }
@@ -104,7 +104,7 @@ var app = new Vue({
 
     smoothScroll: function(index){
       var slected_item = this.navbar_items[index].name
-      document.querySelector('#' + slected_item).scrollIntoView({ 
+      document.querySelector('#' + slected_item + '-link').scrollIntoView({ 
         behavior: 'smooth' 
       });
     },
