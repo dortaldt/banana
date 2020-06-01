@@ -105,37 +105,30 @@ recipe = [
 
   {
     "id": 1,
-    "name" : "Chocolate Cake",
+    "name" : "Banana Pancakes",
     "main_img" : "url(./images/main.jpg)",
-    "recipe_des" : "This is the tastiest chocolate cake recipe there is. No life stories, no ads, no BS -- just a great recipe.",
+    "recipe_des" : "This is the tastiest banana pancakes recipe there is. No life stories, no ads, no BS -- just a great recipe.",
     "rating" : [
       { 
         "name": "Taste", 
-        "rating": 4.9, 
-        "votes": 129
+        "rating": 4.7, 
+        "votes": 19
       },
       { 
         "name": "Ease", 
-        "rating": 4.2, 
-        "votes": 85
+        "rating": 4.9, 
+        "votes": 33
       },
       { 
         "name": "Quick", 
-        "rating": 3.9, 
-        "votes": 28
+        "rating": 4.4, 
+        "votes": 12
       }
     ],
+
     "ingredients" : [
-        { "id" : 0, "quant" : 110 },
-        { "id" : 1, "quant" : 2 },
-        { "id" : 2, "quant" : 0.25 },
-        { "id" : 3, "quant" : 1 },
-        { "id" : 4, "quant" : 1 },
         { "id" : 5, "quant" : 3 },
-        { "id" : 6, "quant" : 2 },
-        { "id" : 7, "quant" : 1 },
-        { "id" : 8, "quant" : 0.25 },
-        { "id" : 9, "quant" : 0.5 }
+        { "id" : 10, "quant" : 3}
     ],
     "steps": [
         {

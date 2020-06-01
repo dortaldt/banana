@@ -52,7 +52,7 @@ var app = new Vue({
     var recipe = window.recipe[this.recipeId]
     var recipeIngrs = recipe.ingredients
 
-    for(ing in allIngrs) {
+    for(ing in recipeIngrs) {
       var selectedIngr = allIngrs.find(element => element.id == recipeIngrs[ing].id)
       if(selectedIngr !== undefined){
         selectedIngr.quant = recipeIngrs[ing].quant

@@ -103,5 +103,18 @@ ingrs = [
         },
         "selectedSize": "cup",
         "done": false
+    },
+    {
+        "id": 10,
+        "name":"peanut butter",
+        "sizes": {
+            "cup": 1,
+            "tablespoon": 16,
+            "teaspoon": 48,
+            "grams": 250
+        },
+        "selectedSize": "teaspoon",
+        "done": false
     }
+
 ]
