@@ -106,7 +106,7 @@ recipe = [
   {
     "id": 1,
     "name" : "Banana Pancakes",
-    "main_img" : "url(./images/main.jpg)",
+    "main_img" : "url(https://cookieandkate.com/images/2018/11/whole-wheat-banana-pancakes-recipe-1-1-1100x1648.jpg)",
     "recipe_des" : "This is the tastiest banana pancakes recipe there is. No life stories, no ads, no BS -- just a great recipe.",
     "rating" : [
       { 
@@ -128,73 +128,52 @@ recipe = [
 
     "ingredients" : [
         { "id" : 5, "quant" : 3 },
-        { "id" : 10, "quant" : 3}
+        { "id" : 10, "quant" : 3},
+        { "id" : 11, "quant" : 6},
+        { "id" : 1, "quant" : 3},
+        { "id" : 4, "quant" : 1}
     ],
     "steps": [
         {
-          "name": "Preheat the oven",
-          "ing": "",
-          "content": "Let’s start with preheating the oven to 350°F(175°C)",
+          "name": "Mash in the bananas",
+          "ing": "3 ripe bananas",
+          "content": "In a large bowl, using a fork or handheld masher, mash the bananas until they turn into a uniform pulp.",
           "active": true
         },
         {
-          "name": "Prepare the pan",
-          "ing": "8x5-inch (255x130cm) loaf pan",
-          "content": "Line an 8x5-inch (255x130cm) loaf pan with parchment paper, letting the excess hang over the long sides to form a sling",
+          "name": "Add the 'wets'",
+          "ing": "3 mashed bananas · 3 eggs · 3 teaspoons peanut butter · 1 teaspoon vanilla extract",
+          "content": "Add the eggs, peanut butter, and vanilla extract to the mashed bananas pulp and mix it until becomes a unified batter",
           "active": false
         },
         {
-          "name": "Melt the butter",
-          "ing": "8 tablespoons unsalted butter",
-          "content": "In a microwave, or over a low heat stove, melt the butter so it becomes liquid",
+          "name": "Add the flour",
+          "ing": "6 tablespoons self-rising flour ",
+          "content": "Now, gradually add the flour into the pulp, make sure to stir the batter as you go.",
           "active": false
         },
         {
-          "name": "Mix the “drys”",
-          "ing": "2 cups all-purpose flour · 1 teaspoon baking soda · 1/4 teaspoon salt",
-          "content": "Now take all the dry ingredients — flour, baking soda, and salt, and mix them in a medium bowl.",
-          "active": false
-        },
-        {
-          "name": "Mash in the bananas",
-          "ing": "3 bananas (very ripe)",
-          "content": "In a large bowl, using a fork or handheld masher, mash the bananas until they turn into a uniform pulp.",
-          "active": false
-        },
-        {
-          "name": "Add the “wets”",
-          "ing": "2 large eggs · 1 teaspoon vanilla extract · 8 tablespoons unsalted butter · 1/4 cup milk",
-          "content": "Add the wet ingredients— eggs, milk, melted butter, vanilla extract, and sugar (yeh, it’s not wet, but now it will) to the meshed bananas pulp and mix it until it becomes a unified batter.",
-          "active": false
-        },
-        {
-          "name": "Add the “drys”",
+          "name": "Heat the pan",
           "ing": "",
-          "content": "Slowly, while stirring the batter, add the pre-mixed “drys” into the pulp.",
+          "content": "Place a nonstick pan on the stoves and turn it on a medium heat- give it 5 minutes to warm up.",
           "active": false
         },
         {
-          "name": "Pure the batter into the pan",
+          "name": "Pure the batter",
           "ing": "",
-          "content": "Almost there! Now pure the batter into the pan.",
+          "content": "Pour or scoop the batter onto the pan, using approximately 1/4 cup for each pancake.",
           "active": false
         },
         {
-          "name": "Bake for 50 mins",
+          "name": "Brown them",
           "ing": "",
-          "content": "Depends on your oven, it should take 45-50 mins for the bread to be ready. ",
-          "active": false
-        },
-        {
-          "name": "Cool",
-          "ing": "",
-          "content": "Let the bread cool for 10 mins inside the pan, and then 10 mins outside of the pan",
+          "content": "After approximately 1 min, turn the pancakes making sure that each side is slightly brown",
           "active": false
         },
         {
           "name": "Enjoy",
           "ing": "",
-          "content": "Enjoy your fresh home-made banana bread!",
+          "content": "Serve with peanut butter and coconut chips— yummy!",
           "active": false
         }
       ]

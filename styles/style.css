@@ -119,6 +119,7 @@ td {
 .social-buttons {
     margin: auto 16px;
     display: flex;
+    color: grey;
 }
 
 .social-buttons button {
@@ -127,7 +128,7 @@ td {
     display: flex;
     flex-direction: column;
     background: none;
-    color: 4f4f4f;
+    color: #4f4f4f;
     /* height: 56px; */
     border: none;
     /* justify-content: space-between; */
@@ -403,6 +404,10 @@ footer {
     .step {
         margin-right: 0;
         margin-left: 0;
+    }
+
+    .step :hover {
+        cursor: pointer;
     }
 
     .main-img {

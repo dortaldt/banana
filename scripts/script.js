@@ -32,7 +32,7 @@ Vue.component('banner', {
 var app = new Vue({
     el: '#app',
     data: {
-      recipeId: 0,
+      recipeId: 1,
       active: false,
       ingredients: [],
       steps: [],
