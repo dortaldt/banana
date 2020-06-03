@@ -28,11 +28,13 @@
 
 <body>
     <div id='app' v-scroll="handleScroll">
+        <a id='overview-link' ref='overview'></a>
        <div class="header">
             <div class="title-wrap">
                 <div class="title">
                     <button @click="toggleMenu()">
-                        <ion-icon name="fast-food-outline" size="large"></ion-icon>
+                        <span class="material-icons md-36">menu</span>
+                        <!-- <div class='banana-icon'></div> -->
                     </button>
                     <h1>{{ app_name }}</h1>
                 </div>
@@ -46,8 +48,8 @@
                </ul>
            </div>
        </div>
-       <menu v-if="menuState">
-           <div class="menu-bg" @click='toggleMenu()'></div>
+       <menu>
+           <div v-if='menuState' class="menu-bg" @click='toggleMenu()'></div>
             <div :class="{'menu-cont': true, 'menu-open': menuState}">
                 <h2>More recipes</h2>
                 <ul>
@@ -60,7 +62,6 @@
        <div class="main-content">
            <section id='overview'>
                 <!-- <div class="divider"> -->
-                <a id='overview-link' ref='overview'></a>
                 <!-- </div> -->
                 <div class="overview-header">
                     <h2>{{recipe_name}}</h2>

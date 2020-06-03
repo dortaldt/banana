@@ -39,7 +39,7 @@ var app = new Vue({
     el: '#app',
     router,
     data: {
-      recipeId: 1,
+      recipeId: 0,
       active: false,
       menuState: 0,
       menuItems:[],
@@ -55,8 +55,11 @@ var app = new Vue({
       main_img: ""
   },
   mounted() {
-
-    this.recipeId = this.$route.query.recipeId
+    
+    //Choosing recipe
+    if(this.$route.query.recipeId){
+      this.recipeId = this.$route.query.recipeId
+    }
 
     // Importing the needed ingredients and quantites
     var allIngrs = window.ingrs
