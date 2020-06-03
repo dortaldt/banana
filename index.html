@@ -49,8 +49,9 @@
        <menu v-if="menuState">
            <div class="menu-bg" @click='toggleMenu()'></div>
             <div :class="{'menu-cont': true, 'menu-open': menuState}">
-                <ul v-for="(item, index) in menuItems">
-                    <li>
+                <h2>More recipes</h2>
+                <ul>
+                    <li v-for="(item, index) in menuItems">
                         <a :href="'?recipeId=' + index">{{item}}</a>
                     </li>
                 </ul>
@@ -68,9 +69,6 @@
                         <button><span :class="{'material-icons':true, liked:isLiked}" @click='likeToggle()'>thumb_up</span><label>Rate</label></button>
                         <!-- <a href="whatsapp://send?text=Hello%20World!">Hello, world!</a> -->
                     </div>
-                </div>
-                <div class="overview-des">
-                    <p>{{recipe_des}}</p>
                 </div>
                 <div class="rating-wrap">
                     <div class="rating">
@@ -101,6 +99,9 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="overview-des">
+                    <p>{{recipe_des}}</p>
                 </div>
                 <div class="main-img" :style='{backgroundImage : main_img}'>
                 </div>

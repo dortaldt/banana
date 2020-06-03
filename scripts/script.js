@@ -42,7 +42,7 @@ var app = new Vue({
       recipeId: 1,
       active: false,
       menuState: 0,
-      menuItems:['item1','item2', 'item3'],
+      menuItems:[],
       ingredients: [],
       steps: [],
       isSticky: false,
@@ -81,6 +81,11 @@ var app = new Vue({
     this.recipe_name = recipe.name 
     this.rating_items = recipe.rating
     this.main_img = recipe.main_img
+
+    // Getting nav items 
+    for(recipe in window.recipe){
+      this.menuItems.push(window.recipe[recipe].name)
+    }
     
   },
 
