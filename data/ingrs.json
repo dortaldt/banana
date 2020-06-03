@@ -115,6 +115,18 @@ ingrs = [
         },
         "selectedSize": "teaspoon",
         "done": false
+    },
+    {
+        "id": 11,
+        "name":"self-rising flour",
+        "sizes": {
+            "cup": 1,
+            "tablespoon": 16,
+            "teaspoon": 48,
+            "grams": 125
+        },
+        "selectedSize": "tablespoon",
+        "done": false
     }
 
 ]

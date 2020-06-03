@@ -1,3 +1,9 @@
+var router = new VueRouter({
+  mode: 'history',
+  routes: []
+});
+
+
 Vue.directive('scroll', {
   inserted: function (el, binding) {
     let f = function (evt) {
@@ -31,9 +37,12 @@ Vue.component('banner', {
 
 var app = new Vue({
     el: '#app',
+    router,
     data: {
       recipeId: 0,
       active: false,
+      menuState: 0,
+      menuItems:[],
       ingredients: [],
       steps: [],
       isSticky: false,
@@ -46,6 +55,11 @@ var app = new Vue({
       main_img: ""
   },
   mounted() {
+    
+    //Choosing recipe
+    if(this.$route.query.recipeId){
+      this.recipeId = this.$route.query.recipeId
+    }
 
     // Importing the needed ingredients and quantites
     var allIngrs = window.ingrs
@@ -70,6 +84,11 @@ var app = new Vue({
     this.recipe_name = recipe.name 
     this.rating_items = recipe.rating
     this.main_img = recipe.main_img
+
+    // Getting nav items 
+    for(recipe in window.recipe){
+      this.menuItems.push(window.recipe[recipe].name)
+    }
     
   },
 
@@ -174,6 +193,14 @@ var app = new Vue({
 
       sendEvent('Click switch size '+ ing.name)
       
+    },
+
+    toggleMenu: function() {
+      if(this.menuState == 0 ){
+        this.menuState = 1
+      } else {
+        this.menuState = 0
+      }
     }
   }
 })

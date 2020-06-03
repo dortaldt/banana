@@ -11,10 +11,15 @@ body {
 
 h1 {
     font-family: 'Roboto Slab';
+    font-weight: 400;
+    margin-left: 0px !important;
+    font-size: 36px;
+    /* line-height: 36px; */
 }
 
 h2 {
     font-weight: 300;
+    margin-top: 24px !important;
 }
 
 p {
@@ -22,10 +27,79 @@ p {
     margin: 0;
 }
 
+menu {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 9;
+    padding: 0px;
+}
+
+.banana-icon {
+    height: 48px;
+    width: 48px;
+    background-size: contain;
+    /* background-color: black; */
+    background-image: url('../images/banana.svg');
+}
+
+.menu-bg {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-color: #000000a1;
+    z-index: 2;
+}
+
+.menu-cont {
+    width: 260px;
+    height: 100%;
+    background-color: #F2C94C;
+    box-shadow: 1px 3px 12px rgba(0,0,0,0.22);
+    padding: 24px;
+    z-index: 3;
+    top: 0;
+    left: -308px;
+    position: absolute;
+    transition: 0.3s;
+}
+
+.menu-open {
+    left: 0;
+}
+
+menu li {
+    /* margin: 16px; */
+    padding: 24px;
+    border-bottom: 1px solid rgb(214, 161, 1);
+}
+
+menu li a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+menu ul {
+    padding: 0;
+    /* margin: 16px; */
+}
+
 h1,h2 {
     margin-left: 16px;
     margin-top: 16px;
     margin-bottom: 16px;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 16px;
 }
 
 table {
@@ -119,6 +193,7 @@ td {
 .social-buttons {
     margin: auto 16px;
     display: flex;
+    color: grey;
 }
 
 .social-buttons button {
@@ -127,7 +202,7 @@ td {
     display: flex;
     flex-direction: column;
     background: none;
-    color: 4f4f4f;
+    color: #4f4f4f;
     /* height: 56px; */
     border: none;
     /* justify-content: space-between; */
@@ -171,7 +246,7 @@ td {
 }
 
 .main-img {
-    margin-top: 16px;
+    margin-top: 24px;
     width: 100%;
     height: 461px;
     max-height: 1000px;
@@ -186,9 +261,13 @@ li {
 }
 
 .title {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 16px;
     max-width: 600px;
     margin-right: auto;
     margin-left: auto;
+    display: flex;
 }
 
 .navbar {
@@ -320,8 +399,8 @@ input[type='checkbox']:checked:after {
 }
 
 .material-icons.md-18 {font-size: 18px;color: #efb400;border:;}
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-24 {font-size: 24px;}
+.material-icons.md-36 {font-size: 24px;}
 .material-icons.md-48 { font-size: 48px; }
 
 .share-icon {
@@ -358,7 +437,7 @@ footer {
 .banner {
     /* background-color: green; */
     /* margin: 16; */
-    padding: 16px;
+    padding: 0 16px;
     border: 1px solid #d8d8d8;
     border-radius: 0;
     display: flex;
@@ -394,6 +473,10 @@ footer {
         width: 600px;
     }
 
+    .title {
+        /* max-width: 712px; */
+    }
+
     .rating {
         padding: 0;
         margin-bottom: 24px;
@@ -403,6 +486,10 @@ footer {
     .step {
         margin-right: 0;
         margin-left: 0;
+    }
+
+    .step :hover {
+        cursor: pointer;
     }
 
     .main-img {
