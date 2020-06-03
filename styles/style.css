@@ -11,6 +11,8 @@ body {
 
 h1 {
     font-family: 'Roboto Slab';
+    font-weight: 400;
+    margin-left: 0px !important;
 }
 
 h2 {
@@ -22,10 +24,45 @@ p {
     margin: 0;
 }
 
+.menu-bg {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-color: #000000a1;
+    z-index: 2;
+}
+
+.menu-cont {
+    width: 260px;
+    height: 100%;
+    background-color: #F2C94C;
+    box-shadow: 1px 3px 12px rgba(0,0,0,0.22);
+    padding: 24px;
+    z-index: 3;
+    top: 0;
+    left: -308px;
+    position: absolute;
+    transition: 0.3s;
+}
+
+.menu-open {
+    left: 0;
+}
+
 h1,h2 {
     margin-left: 16px;
     margin-top: 16px;
     margin-bottom: 16px;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 16px;
 }
 
 table {
@@ -190,6 +227,7 @@ li {
     max-width: 600px;
     margin-right: auto;
     margin-left: auto;
+    display: flex;
 }
 
 .navbar {
@@ -359,7 +397,7 @@ footer {
 .banner {
     /* background-color: green; */
     /* margin: 16; */
-    padding: 16px;
+    padding: 0 16px;
     border: 1px solid #d8d8d8;
     border-radius: 0;
     display: flex;

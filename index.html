@@ -3,6 +3,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons&?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>THE Banana Bread</title>
@@ -30,6 +31,9 @@
        <div class="header">
             <div class="title-wrap">
                 <div class="title">
+                    <button @click="toggleMenu()">
+                        <ion-icon name="fast-food-outline" size="large"></ion-icon>
+                    </button>
                     <h1>{{ app_name }}</h1>
                 </div>
             </div>
@@ -42,6 +46,16 @@
                </ul>
            </div>
        </div>
+       <menu v-if="menuState">
+           <div class="menu-bg" @click='toggleMenu()'></div>
+            <div :class="{'menu-cont': true, 'menu-open': menuState}">
+                <ul v-for="(item, index) in menuItems">
+                    <li>
+                        <a :href="'?recipeId=' + index">{{item}}</a>
+                    </li>
+                </ul>
+            </div>
+       </menu>
        <div class="main-content">
            <section id='overview'>
                 <!-- <div class="divider"> -->
@@ -142,6 +156,7 @@
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router"></script>
 <script src="data/ingrs.json"></script>
 <script src="data/recipe.json"></script>
 <script src="scripts/script.js"></script>
