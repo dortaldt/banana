@@ -59,16 +59,10 @@ var app = new Vue({
 
   metaInfo() {
     return {
-      // if no subcomponents specify a metaInfo.title, this title will be used
       title: window.recipe[this.recipeId].name,
-
-      // all titles will be injected into this template
       titleTemplate: '%s | No Bullshit Recipes',
       meta: [
         { name: 'description', content: "World's best " + this.recipe_name + " recipe, and it's simple!" },
-        { property: 'og:title', content: "The only " + this.recipe_name + " recipe you need"},
-        { property:'og:description', content: "World's best " + this.recipe_name + " recipe, and it's simple!" },
-        { property: "og:image" ,content: this.main_img}
       ]
     }
   },
