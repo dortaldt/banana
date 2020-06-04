@@ -2,7 +2,7 @@ recipe = [
   {
     "id": 0,
     "name" : "Banana Bread",
-    "main_img" : "url(./images/main.jpg)",
+    "main_img" : "./images/main.jpg",
     "recipe_des" : "This is the tastiest banana bread recipe there is. No life stories, no ads, no BS -- just a great recipe.",
     "rating" : [
       { 
@@ -106,7 +106,7 @@ recipe = [
   {
     "id": 1,
     "name" : "Banana Pancakes",
-    "main_img" : "url(https://cookieandkate.com/images/2018/11/whole-wheat-banana-pancakes-recipe-1-1-1100x1648.jpg)",
+    "main_img" : "https://cookieandkate.com/images/2018/11/whole-wheat-banana-pancakes-recipe-1-1-1100x1648.jpg",
     "recipe_des" : "This is the tastiest banana pancakes recipe there is. No life stories, no ads, no BS -- just a great recipe.",
     "rating" : [
       { 
